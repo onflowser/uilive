@@ -57,17 +57,7 @@ type newline struct {
 
 // New returns a new Writer with defaults
 func New() *Writer {
-	termWidth, _ = getTermSize()
-	if termWidth != 0 {
-		overFlowHandled = true
-	}
-
-	return &Writer{
-		Out:             Out,
-		RefreshInterval: RefreshInterval,
-
-		mtx: &sync.Mutex{},
-	}
+	panic("Unimplemented")
 }
 
 // Flush writes to the out and resets the buffer. It should be called after the last call to Write to ensure that any data buffered in the Writer is written to output.
